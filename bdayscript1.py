@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import openpyxl
 import smtplib
 from datetime import datetime
