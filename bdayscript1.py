@@ -4,7 +4,7 @@ import smtplib
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-filepath = r'C:\Users\LENOVO\Downloads\Book12.xlsx'
+filepath = r'Book12.xlsx'
 workbook = openpyxl.load_workbook(filepath)
 sheet = workbook['Sheet1']
 today = datetime.today().strftime('%m-%d')
