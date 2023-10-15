@@ -2,8 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '10 2 * * *' # Runs daily at 1 am UTC
-  workflow_dipatch:
+    - cron: '25 2 * * *' # Runs daily at 1 am UTC
 jobs:
   build:
     runs-on: ubuntu-latest
