@@ -3,7 +3,7 @@ name: Run Python Script
 on:
   schedule:
     - cron: '10 2 * * *' # Runs daily at 1 am UTC
-
+  workflow_dipatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,3 +19,4 @@ jobs:
 
     - name: Run Python Script
       run: python bdayscript1.py
+
