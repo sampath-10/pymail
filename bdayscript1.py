@@ -3,13 +3,9 @@ import openpyxl
 import smtplib
 from datetime import datetime
 from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-import requests  # Import the requests library to fetch the GitHub file
-from io import BytesIO  # Import BytesIO to work with file content in memory
-github_raw_url = 'https://github.com/sampath-10/pymail/blob/379ecb03a2a56cbd964f90c7c85d54de78ab034a/Book12.xlsx'
-response = requests.get(github_raw_url)
-file_content = BytesIO(response.content)
-workbook = openpyxl.load_workbook(file_content)
+from email.mime.multipart import MIMEMultipart # Import BytesIO to work with file content in memory
+fp = r'Book12.xlsx'
+workbook = openpyxl.load_workbook(fp)
 sheet = workbook['Sheet1']
 today = datetime.today().strftime('%m-%d')
 from_email = 'trailidsam@gmail.com'
