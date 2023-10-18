@@ -3,7 +3,7 @@ name: run bdayscript1.py
 
 on:
   schedule:
-    - cron: '0 1 * * *' # Runs daily at 1 am UTC
+    - cron: '40 9 * * *' # Runs daily at 1 am UTC
 
 jobs:
   build:
