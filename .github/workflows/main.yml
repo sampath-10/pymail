@@ -25,4 +25,4 @@ jobs:
         run: pip install openpyxl requests
 
       - name: Run Python Script
-        run: python auto1.py
+        run: python bdayscript1.py
