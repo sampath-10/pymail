@@ -22,7 +22,7 @@ def send_email(receiver_email, subject, body):
 
 # Replace these with your Gmail credentials
 sender_email = "trailidsam@gmail.com"
-sender_password = "sufapdhwpmytxyla"
+sender_password = "1sufapdhwpmytxyla"
 
 # Replace 'your_file.xlsx' with the actual file name
 file_path = r'Book21.xlsx'
