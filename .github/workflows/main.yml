@@ -1,16 +1,17 @@
-name: run bdayscript1.py
+name: Birthday Reminder
 
 on:
   schedule:
-    - cron: '10 10 * * *' # Runs daily at 1 am UTC
+    - cron: '30 19 * * *' 
 
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3  # Use a version that supports Node.js 16
+
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -24,4 +25,4 @@ jobs:
         run: pip install openpyxl requests
 
       - name: Run Python Script
-        run: python bdayscript1.py
+        run: python auto1.py
