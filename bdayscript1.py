@@ -25,7 +25,7 @@ sender_email = "trailidsam@gmail.com"
 sender_password = "sufapdhwpmytxyla"
 
 # Replace 'your_file.xlsx' with the actual file name
-file_path = r'C:\Users\Sampath\Documents\details.xlsx'
+file_path = r'Book12.xlsx'
 
 # Load the workbook
 workbook = load_workbook(file_path)
