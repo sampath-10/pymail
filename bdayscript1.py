@@ -25,7 +25,7 @@ sender_email = "trailidsam@gmail.com"
 sender_password = "sufapdhwpmytxyla"
 
 # Replace 'your_file.xlsx' with the actual file name
-file_path = r'Book12.xlsx'
+file_path = r'Book21.xlsx'
 
 # Load the workbook
 workbook = load_workbook(file_path)
@@ -34,7 +34,10 @@ workbook = load_workbook(file_path)
 sheet = workbook['Sheet1']
 
 # Get today's date in the format of your Excel sheet's DOB column
-today_date = datetime.now().strftime("%m-%d")
+today = datetime.today()
+tomorrow = today + timedelta(days=1)
+today_date = tomorrow.strftime('%m/%d')
+
 
 # Initialize lists for today's birthdays and others
 today_birthdays = []
@@ -46,9 +49,9 @@ for row in sheet.iter_rows(values_only=True):
         name, dob_str, gmail_id = row[:3]
         # Assume dob_str is in the format "%m-%d"
         dob_str = f"{datetime.now().year}-{dob_str}"
-        dob = datetime.strptime(dob_str, "%Y-%m-%d")
+        dob = datetime.strptime(dob_str, "%Y/%m/%d")
         # Check if the person's birthday is today
-        if dob.strftime("%m-%d") == today_date:
+        if dob.strftime("%m/%d") == today_date:
             today_birthdays.append((name, dob, gmail_id))
         else:
             other_birthdays.append((name, dob, gmail_id))
